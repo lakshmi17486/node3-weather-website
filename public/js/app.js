@@ -1,5 +1,3 @@
-console.log('Printing from public js folder');
-
 const weatherForm = document.querySelector('form');
 
 const search = document.querySelector('input');
