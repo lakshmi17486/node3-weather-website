@@ -48,14 +48,14 @@ app.get('/weather', (req, res) => {
             error: 'Please provide an address'
         })
     }
-    geocode(req.query.address, (error, {weather_descriptions, temperature, feelslike} = {}) => {
+    geocode(req.query.address, (error, {weather_descriptions, temperature, feelslike, humidity} = {}) => {
         if (error) {
             return res.send( {
                 error: error
             })
         } else {
             res.send({
-                forecast: `${weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} out`,
+                forecast: `${weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} out. And the humidity is ${humidity}.`,
                 address: req.query.address,
                 temperature: temperature,
                 feelslike: feelslike
