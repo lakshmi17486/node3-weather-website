@@ -1,14 +1,16 @@
+
+name: SonarCloud scan
 on:
   # Trigger analysis when pushing in master or pull requests, and when creating
   # a pull request.
   push:
     branches:
       - master
-  pull_request:
-      types: [opened, synchronize, reopened]
+  
 name: SonarCloud scan
 jobs:
-  sonarcloud:
+  sonarCloudTrigger:
+    name: SonarCloud Trigger
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
