@@ -5,7 +5,7 @@ on:
     branches:
       - master
   
-name: SonarCloud scan
+name: SonarCloud Scan
 jobs:
   sonarCloudTrigger:
     name: SonarCloud Trigger
